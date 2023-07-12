@@ -1,13 +1,21 @@
 import React from 'react';
+import LandingPage from './views/LandingPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+
+
+
 // import StudentList from './components/StudentList';
 
 function App() {
   return (
-    <div>
-      <h1>KUSYS-Demo Web App</h1>
-      {/* Diğer bileşenler buraya eklenebilir */}
-      {/* <StudentList /> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
