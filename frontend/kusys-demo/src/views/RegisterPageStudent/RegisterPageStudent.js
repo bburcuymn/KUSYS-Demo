@@ -1,17 +1,19 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { RegisterPageStyle } from './RegisterPageStyle';
 
 const RegisterPageAdmin = () => {
     const [name, setName] = useState('');
-    const [studentId, setStudentId] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [schoolNo, setSchoolNo] = useState('');
+    const [birthDay, setBirthDay] = useState('');
+    const [courses, setCourses] = useState([]);
 
     const handleRegister = async (event) => {
         event.preventDefault();
 
-        const newStudent = { name, email, password };
+        const newStudent = { name, email, schoolNo, birthDay, password, courses };
 
         try {
             // Yeni admin verilerini db.json dosyasına kaydet
@@ -42,12 +44,16 @@ const RegisterPageAdmin = () => {
                         <input type="text" id="name" placeholder="Enter name" required value={name} onChange={e => setName(e.target.value)} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="studentId">Student Id</label>
-                        <input type="text" id="studentId" placeholder="Enter studentId" required value={studentId} onChange={e => setStudentId(e.target.value)} />
-                    </div>
-                    <div className="form-group">
                         <label htmlFor="email">Email Address</label>
                         <input type="email" id="email" placeholder="Enter email" required value={email} onChange={e => setEmail(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="schoolNo">School Number</label>
+                        <input type="text" id="schoolNo" placeholder="Enter School Numebr" required value={schoolNo} onChange={e => setSchoolNo(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="birthDay">Birth Day</label>
+                        <input type="date" id="birthDay" placeholder="Enter Birth Day" required value={birthDay} onChange={e => setBirthDay(e.target.value)} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>

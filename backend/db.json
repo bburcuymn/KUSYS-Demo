@@ -1,39 +1,85 @@
 {
   "admins": [
     {
-      "userId": 1,
-      "firsName": "Burcu",
-      "lastName": "Yaman",
+      "adminId": 1,
+      "name": "Burcu Yaman",
+      "email": "burcuyaman@gmail.com",
+      "corporationNo": "1234567890",
       "birthDay": "10.08.1999",
-      "email": "burcuyaman@gmail.com"
+      "password": "123"
     },
     {
-      "userId": 2,
-      "firsName": "Baran",
-      "lastName": "Altun",
-      "birthDay": "25.12.1999",
-      "email": "baranaltun@gmail.com"
+      "adminId": 2,
+      "name": "Baran Altun",
+      "email": "baranaltun@gmail.com",
+      "corporationNo": "33333333",
+      "birthDay": "25.08.1999",
+      "password": "33333"
     },
     {
-      "userId": 3,
-      "name": "Telefon",
-      "email": "test@outlook.com",
-      "password": "ğğğ"
+      "adminId": 3,
+      "name": "deneme Yaman",
+      "email": "deneme@gmail.com",
+      "corporationNo": "9999999",
+      "birthDay": "06.08.1999",
+      "password": "66666"
+    },
+    {
+      "adminId": 4,
+      "name": "testname",
+      "email": "testmail@gmail.com",
+      "corporationNo": "5555555555",
+      "birthDay": "1988-12-11",
+      "password": "deneme"
     }
   ],
   "students": [
     {
-      "studentId": 4,
-      "firsName": "Mehmet",
-      "lastName": "Yaman",
+      "studentId": 1,
+      "name": "Burcu Yaman",
+      "email": "burcuyaman@gmail.com",
+      "schoolNo": "12345678909",
       "birthDay": "10.08.1999",
-      "email": "aaa@gmail.com"
+      "password": "123",
+      "courses": [
+        {
+          "courseId": 1,
+          "courseName": "Matematik",
+          "courseCode": "MAT101"
+        }
+      ]
     },
     {
-      "studentId": 5,
-      "name": "aaaaa",
-      "email": "bburcu0003@gmail.com",
-      "password": "123"
+      "studentId": 2,
+      "name": "Baran Altun",
+      "email": "baran@gmail.com",
+      "schoolNo": "9898989",
+      "birthDay": "06.06.1999",
+      "password": "999999",
+      "courses": [
+        {
+        }
+      ]
+    },
+    {
+      "studentId": 3,
+      "name": "deneme",
+      "email": "deneme@gmail.com",
+      "schoolNo": "66666",
+      "birthDay": "2002-11-11",
+      "password": "55555",
+      "courses": [
+        {
+        }
+      ]
+    }
+  ],
+  "allCourses":[
+    {
+      "courseId": 1,
+      "courseName": "Matematik",
+      "courseCode": "MAT101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     }
   ]
 }

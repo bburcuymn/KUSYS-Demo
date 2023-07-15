@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { RegisterPageStyle } from './RegisterPageStyle';
 
@@ -6,11 +6,13 @@ const RegisterPageAdmin = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [corporationNo, setCorporationNo] = useState('');
+    const [birthDay, setBirthDay] = useState('');
 
     const handleRegister = async (event) => {
         event.preventDefault();
 
-        const newAdmin = { name, email, password };
+        const newAdmin = { name, email, corporationNo, birthDay, password };
 
         try {
             // Yeni admin verilerini db.json dosyasına kaydet
@@ -43,6 +45,14 @@ const RegisterPageAdmin = () => {
                     <div className="form-group">
                         <label htmlFor="email">Email Address</label>
                         <input type="email" id="email" placeholder="Enter email" required value={email} onChange={e => setEmail(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="corporationNo">Corporation Number</label>
+                        <input type="text" id="corporationNo" placeholder="Enter Corporation Number" required value={corporationNo} onChange={e => setCorporationNo(e.target.value)} />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="birthDay">Birth Day</label>
+                        <input type="date" id="birthDay" placeholder="Enter Birth Day" required value={birthDay} onChange={e => setBirthDay(e.target.value)} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>

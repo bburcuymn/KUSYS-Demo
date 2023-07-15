@@ -13,7 +13,8 @@ const LandingPage = () => {
         <h1>Welcome to the KUSYS-Demo</h1>
         <div className="card">
           <h2>Login</h2>
-          <Link to="/login">Login</Link>
+          <Link to="/loginAdmin">Login as a Admin</Link>
+          <Link to="/loginStudent">Login as a Student</Link>
         </div>
         <div className="card">
           <h2>Register</h2>
