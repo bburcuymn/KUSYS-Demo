@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "../views/HomePage/HomePage";
 import LandingPage from "../views/LandingPage/LandingPage";
 import LoginPage from "../views/LoginPage/LoginPage";
-import RegisterPage from "../views/RegisterPage/RegisterPage";
 import StudentsPage from "../views/StudentsPage/StudentsPage";
 import StudentDetailPage from "../views/StudentDetailPage/StudentDetailPage";
 import CoursesPage from "../views/CoursesPage/CoursesPage";
+import RegisterPageAdmin from "../views/RegisterPageAdmin/RegisterPageAdmin";
+import RegisterPageStudent from "../views/RegisterPageStudent/RegisterPageStudent";
 
 
 const AppRouter = () => {
@@ -14,7 +15,8 @@ const AppRouter = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
+            <Route path="/registerAdmin" element={<RegisterPageAdmin />} />
+            <Route path="/registerStudent" element={<RegisterPageStudent />} />
             <Route path="/home/:username" element={<HomePage />} />
             <Route path="/home/:username/students" element={<StudentsPage />} />
             <Route path="/home/:username/courses" element={<CoursesPage />} />

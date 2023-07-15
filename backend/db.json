@@ -1,0 +1,39 @@
+{
+  "admins": [
+    {
+      "userId": 1,
+      "firsName": "Burcu",
+      "lastName": "Yaman",
+      "birthDay": "10.08.1999",
+      "email": "burcuyaman@gmail.com"
+    },
+    {
+      "userId": 2,
+      "firsName": "Baran",
+      "lastName": "Altun",
+      "birthDay": "25.12.1999",
+      "email": "baranaltun@gmail.com"
+    },
+    {
+      "userId": 3,
+      "name": "Telefon",
+      "email": "test@outlook.com",
+      "password": "ğğğ"
+    }
+  ],
+  "students": [
+    {
+      "studentId": 4,
+      "firsName": "Mehmet",
+      "lastName": "Yaman",
+      "birthDay": "10.08.1999",
+      "email": "aaa@gmail.com"
+    },
+    {
+      "studentId": 5,
+      "name": "aaaaa",
+      "email": "bburcu0003@gmail.com",
+      "password": "123"
+    }
+  ]
+}

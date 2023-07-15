@@ -13,12 +13,12 @@ const LandingPage = () => {
         <h1>Welcome to the KUSYS-Demo</h1>
         <div className="card">
           <h2>Login</h2>
-          <Link to="/login">Admin</Link>
-          <Link to="/login">Student</Link>
+          <Link to="/login">Login</Link>
         </div>
         <div className="card">
           <h2>Register</h2>
-          <Link to="/register">Register</Link>
+          <Link to="/registerAdmin">Register for Admins</Link>
+          <Link to="/registerStudent">Register for Students</Link>
         </div>
       </div>
     </LandingPageStyle>
