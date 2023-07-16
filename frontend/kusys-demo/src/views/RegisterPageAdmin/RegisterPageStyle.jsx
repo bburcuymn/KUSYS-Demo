@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 export const RegisterPageStyle = styled.div`
-  background-image: url(${props => props.backgroundImage});
+
   background-size: cover;
   background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+
 
   .register-page-content {
     text-align: center;
@@ -23,7 +25,6 @@ export const RegisterPageStyle = styled.div`
   }
 
   input {
-    margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
@@ -31,11 +32,12 @@ export const RegisterPageStyle = styled.div`
 
   button {
     padding: 10px 20px;
-    background-color: #4caf50;
+    background-color: #3cbf98;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top:10px
   }
 
   p {

@@ -35,33 +35,33 @@ const RegisterPageAdmin = () => {
 
 
     return (
-        <RegisterPageStyle backgroundImage="https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80">
+        <RegisterPageStyle >
             <div className="register-page-content">
                 <h2>Register</h2>
                 <form onSubmit={handleRegister}>
-                    <div className="form-group">
+                    <div className="form-group d-flex justify-content-between align-items-center my-2">
                         <label htmlFor="name">Name</label>
                         <input type="text" id="name" placeholder="Enter name" required value={name} onChange={e => setName(e.target.value)} />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group d-flex justify-content-between align-items-center my-2">
                         <label htmlFor="email">Email Address</label>
                         <input type="email" id="email" placeholder="Enter email" required value={email} onChange={e => setEmail(e.target.value)} />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group d-flex justify-content-between align-items-center my-2">
                         <label htmlFor="schoolNo">School Number</label>
                         <input type="text" id="schoolNo" placeholder="Enter School Numebr" required value={schoolNo} onChange={e => setSchoolNo(e.target.value)} />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group d-flex justify-content-between align-items-center my-2">
                         <label htmlFor="birthDay">Birth Day</label>
                         <input type="date" id="birthDay" placeholder="Enter Birth Day" required value={birthDay} onChange={e => setBirthDay(e.target.value)} />
                     </div>
-                    <div className="form-group">
+                    <div className="form-group d-flex justify-content-between align-items-center my-2">
                         <label htmlFor="password">Password</label>
                         <input type="password" id="password" placeholder="Enter password" required value={password} onChange={e => setPassword(e.target.value)} />
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="confirmPassword">Confirm Password</label>
-                        <input type="password" id="confirmPassword" placeholder="Confirm password" required />
+                    <div className="form-group d-flex justify-content-between align-items-center my-2">
+                        <label className='me-3' htmlFor="confirmPassword">Confirm Password</label>
+                        <input type="password d-flex justify-content-between align-items-center my-2" id="confirmPassword" placeholder="Confirm password" required />
                     </div>
                     <button type="submit" className="primary">Register</button>
                 </form>

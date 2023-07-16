@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import { useLocation } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
 
 const StudentPage = () => {
   const [students, setStudents] = useState([]);
@@ -129,15 +130,15 @@ const StudentPage = () => {
     <div>
       <Navbar isAdmin={isAdmin} />
       <div className="container mt-4">
-        <h1>Students List</h1>
+        <h1 className='text-center fw-bold my-5'>STUDENT LİST</h1>
         {isAdmin && (
-          <div className="mb-3">
-            <button className="btn btn-primary" onClick={() => setIsModalOpen(true)}>
-              Create Student
+          <div className="mb-3 d-flex justify-content-end">
+            <button className="btn btn-lg btn-primary" onClick={() => setIsModalOpen(true)}>
+            <i class="fa-solid fa-plus"></i> Create Student
             </button>
           </div>
         )}
-        <table className="table">
+        <table className="table text-center my-5">
           <thead>
             <tr>
               <th>Name</th>
@@ -145,30 +146,30 @@ const StudentPage = () => {
               {isAdmin && <th>Actions</th>}
             </tr>
           </thead>
-          <tbody>
+          <tbody >
             {students.map((student) => (
-              <tr key={student.studentId}>
+              <tr key={student.studentId} >
                 <td>{student.name}</td>
                 <td>{student.schoolNo}</td>
                 {isAdmin && (
-                  <td>
+                  <td >
                     <button
-                      className="btn btn-primary mr-2"
+                      className="btn btn-primary me-2"
                       onClick={() => handleUpdateStudent(student.studentId)}
                     >
-                      Update
+                      <i class="fa-solid fa-pen-to-square"></i> Update
                     </button>
                     <button
-                      className="btn btn-danger"
+                      className="btn btn-danger me-2"
                       onClick={() => handleDeleteStudent(student.studentId)}
                     >
-                      Delete
+                     <i class="fa-solid fa-trash"></i> Delete
                     </button>
                     <button
-                      className="btn btn-info ml-2"
+                      className="btn btn-success "
                       onClick={() => handleOpenStudentDetails(student.studentId)}
                     >
-                      Details
+                     <i class="fa-solid fa-circle-info"></i> Details
                     </button>
                   </td>
                 )}
@@ -297,6 +298,7 @@ const StudentPage = () => {
           </div>
         </div>
       )}
+      <Footer></Footer>
     </div>
   );
 };

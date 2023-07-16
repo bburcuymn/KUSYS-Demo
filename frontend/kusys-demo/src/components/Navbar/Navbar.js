@@ -10,9 +10,9 @@ const Navbar = ({ isAdmin, handleLogout }) => {
     };
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to="/home">
-                My App
+        <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 px-5">
+            <Link className="navbar-brand fw-bold" to="/home">
+                KUSYS-Demo
             </Link>
             <button
                 className="navbar-toggler"
@@ -25,42 +25,44 @@ const Navbar = ({ isAdmin, handleLogout }) => {
             >
                 <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
+            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul className="navbar-nav d-flex gap-4 fs-6 ">
                     {isAdmin ? (
                         <>
-                            <li className="nav-item">
-                                <a className="nav-link" onClick={handleLogout}>
-                                    Logout
-                                </a>
-                            </li>
-                            <li className="nav-item">
+
+                            <li className="nav-item cursor-pointer">
                                 <a className="nav-link" onClick={handleStudentsClick}>
-                                    Students
+                                    <i class="fa-solid fa-people-group text-success fs-5"></i> Students
                                 </a>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item cursor-pointer">
                                 <Link className="nav-link" to="/profile">
-                                    Profile
+                                    <i class="fa-solid fa-user text-success fs-5"></i>  Profile
                                 </Link>
+                            </li>
+                            <li className="nav-item cursor-pointer">
+                                <a className="nav-link" onClick={handleLogout}>
+                                    <i class="fa-solid fa-right-from-bracket text-success fs-5"></i>  Logout
+                                </a>
                             </li>
                         </>
                     ) : (
                         <>
-                            <li className="nav-item">
-                                <a className="nav-link" onClick={handleLogout}>
-                                    Logout
-                                </a>
-                            </li>
-                            <li className="nav-item">
+
+                            <li className="nav-item cursor-pointer">
                                 <Link className="nav-link" to="/my-courses">
-                                    My Courses
+                                    <i class="fa-solid fa-book text-success fs-5"></i> My Courses
                                 </Link>
                             </li>
-                            <li className="nav-item">
+                            <li className="nav-item cursor-pointer">
                                 <Link className="nav-link" to="/profile">
-                                    Profile
+                                    <i class="fa-solid fa-user text-success fs-5"></i>   Profile
                                 </Link>
+                            </li>
+                            <li className="nav-item cursor-pointer">
+                                <a className="nav-link" onClick={handleLogout}>
+                                    <i class="fa-solid fa-right-from-bracket text-success fs-5"></i>   Logout
+                                </a>
                             </li>
                         </>
                     )}

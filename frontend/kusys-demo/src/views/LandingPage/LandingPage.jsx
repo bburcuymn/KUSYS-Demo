@@ -3,23 +3,30 @@ import { Link } from 'react-router-dom';
 import { LandingPageStyle } from './LandingPageStyle';
 
 const LandingPage = () => {
-  const landingPageStyle = {
-    backgroundImage: "url(https://images.unsplash.com/photo-1488998427799-e3362cec87c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80)",
-  };
 
   return (
-    <LandingPageStyle style={landingPageStyle}>
-      <div className="landing-page-content">
-        <h1>Welcome to the KUSYS-Demo</h1>
+    <LandingPageStyle >
+      <div className="landing-page-content ">
+        <h1 className='mb-5'>Welcome to the KUSYS-Demo</h1>
         <div className="card">
           <h2>Login</h2>
-          <Link to="/loginAdmin">Login as a Admin</Link>
-          <Link to="/loginStudent">Login as a Student</Link>
+          <div className="row my-3">
+            <div className="col-md-6 ">
+              <Link to="/loginAdmin" className='px-1 py-2 btn btn-primary text-dark text-decoration-none'>Login as an Admin</Link>
+         </div>
+          <div className="col-md-6">
+       <Link to="/loginStudent" className='px-1 py-2 btn btn-success text-dark text-decoration-none'>Login as a Student</Link></div>
+          </div>
         </div>
+        <h6 className="my-3">OR</h6>
         <div className="card">
           <h2>Register</h2>
-          <Link to="/registerAdmin">Register for Admins</Link>
-          <Link to="/registerStudent">Register for Students</Link>
+          <div className="row my-3"> 
+          <div className="col-md-6 ">
+            <Link to="/registerAdmin"className='px-1 py-2 btn btn-primary text-dark text-decoration-none'>Register for Admins</Link></div> 
+        <div className="col-md-6 "> 
+          <Link to="/registerStudent"className='px-1 py-2 btn btn-success text-dark text-decoration-none'>Register for Students</Link> </div>
+          </div>
         </div>
       </div>
     </LandingPageStyle>

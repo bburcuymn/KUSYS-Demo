@@ -41,11 +41,11 @@ const CoursesList = ({ courses, isAdmin, student, updateStudentCourses }) => {
 
     return (
         <div className="container">
-            <h1>Kurs Listesi</h1>
-            <div className="row">
+            <h1 className='text-center fw-bold my-5'>ALL COURSES</h1>
+            <div className="row my-5">
                 {courses.map((course) => (
-                    <div key={course.courseId} className="col-md-4">
-                        <div className="card">
+                    <div key={course.courseId} className="col-md-3 ">
+                        <div className="card m-3 cursor-pointer">
                             <img src={course.img} className="card-img-top" alt={course.courseName} />
                             <div className="card-body">
                                 <h5 className="card-title">{course.courseName}</h5>
