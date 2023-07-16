@@ -96,6 +96,59 @@ app.post('/api/students', (req, res) => {
     res.status(200).json(newStudent);
 });
 
+app.delete('/api/students/:studentId', (req, res) => {
+    const studentId = parseInt(req.params.studentId);
+
+    // db.json dosyasından veriyi oku
+    const data = fs.readFileSync(dbFilePath);
+    const db = JSON.parse(data);
+
+    // Öğrenciyi bul ve sil
+    const updatedStudents = db.students.filter((student) => student.studentId !== studentId);
+    db.students = updatedStudents;
+
+    // db.json dosyasına veriyi kaydet
+    fs.writeFileSync(dbFilePath, JSON.stringify(db, null, 2));
+
+    // Başarılı bir yanıt döndür
+    res.status(200).json({ message: 'Öğrenci başarıyla silindi' });
+});
+
+app.put('/api/students/:studentId', (req, res) => {
+    const studentId = parseInt(req.params.studentId);
+    const { name, email, schoolNo, birthDay, password, courses } = req.body;
+
+    // db.json dosyasından veriyi oku
+    const data = fs.readFileSync(dbFilePath);
+    const db = JSON.parse(data);
+
+    // Öğrenciyi bul ve güncelle
+    const updatedStudents = db.students.map((student) => {
+        if (student.studentId === studentId) {
+            return {
+                ...student,
+                name,
+                email,
+                schoolNo,
+                birthDay,
+                password,
+                courses
+            };
+        }
+        return student;
+    });
+    db.students = updatedStudents;
+
+    // db.json dosyasına veriyi kaydet
+    fs.writeFileSync(dbFilePath, JSON.stringify(db, null, 2));
+
+    // Güncellenen öğrenciyi döndür
+    const updatedStudent = db.students.find((student) => student.studentId === studentId);
+
+    // Başarılı bir yanıt döndür
+    res.status(200).json(updatedStudent);
+});
+
 app.post('/api/admins/login', (req, res) => {
     const { corporationNo, password } = req.body;
 
@@ -169,6 +222,22 @@ app.get('/api/students', (req, res) => {
         res.status(500).json({ error: 'Öğrenci verilerini okuma hatası' });
     }
 });
+
+app.get('/api/allCourses', (req, res) => {
+    try {
+        // db.json dosyasını oku
+        const data = fs.readFileSync(dbFilePath, 'utf8');
+        const jsonData = JSON.parse(data);
+
+        // courses verisini döndür
+        const allCourses = jsonData.allCourses;
+        res.json(allCourses);
+    } catch (error) {
+        console.error('Tüm derslerin verilerini okuma hatası:', error);
+        res.status(500).json({ error: 'Tüm derslerin verilerini okuma hatası' });
+    }
+});
+
 
 
 

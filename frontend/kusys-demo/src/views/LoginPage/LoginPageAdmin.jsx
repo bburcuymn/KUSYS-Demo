@@ -22,6 +22,7 @@ const LoginPageAdmin = () => {
 
       // Başarılı giriş durumunda yönlendirme yap
       navigate('/home', { state: { isAdmin: true } });
+
     } catch (error) {
       console.log('Login başarısız', error);
       // Başarısız giriş durumunda işlemler

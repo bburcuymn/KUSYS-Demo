@@ -21,7 +21,7 @@ const AppRouter = () => {
             <Route path="/registerStudent" element={<RegisterPageStudent />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/home/:username" element={<HomePage />} />
-            <Route path="/home/:username/students" element={<StudentsPage />} />
+            <Route path="/home/students" element={<StudentsPage />} />
             <Route path="/home/:username/courses" element={<CoursesPage />} />
             <Route path="/home/:username/students/:id" element={<StudentDetailPage />} />
             {/* Diğer rotaları buraya ekleyin */}

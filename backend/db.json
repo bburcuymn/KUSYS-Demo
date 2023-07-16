@@ -35,29 +35,18 @@
   ],
   "students": [
     {
-      "studentId": 1,
-      "name": "Burcu Yaman",
-      "email": "burcuyaman@gmail.com",
-      "schoolNo": "12345678909",
-      "birthDay": "10.08.1999",
-      "password": "123",
-      "courses": [
-        {
-          "courseId": 1,
-          "courseName": "Matematik",
-          "courseCode": "MAT101"
-        }
-      ]
-    },
-    {
       "studentId": 2,
-      "name": "Baran Altun",
+      "name": "Baran Altunnn",
       "email": "baran@gmail.com",
       "schoolNo": "9898989",
       "birthDay": "06.06.1999",
       "password": "999999",
       "courses": [
         {
+          "courseId": 1,
+          "courseName": "Matematik",
+          "courseCode": "MAT101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         }
       ]
     },
@@ -69,16 +58,66 @@
       "birthDay": "2002-11-11",
       "password": "55555",
       "courses": [
-        {
-        }
+        {}
       ]
+    },
+    {
+      "studentId": 4,
+      "name": "burcuyaman",
+      "email": "burcu@gmail.com",
+      "schoolNo": "11111",
+      "birthDay": "1999-11-11",
+      "password": "11111",
+      "courses": ""
     }
   ],
-  "allCourses":[
+  "allCourses": [
     {
       "courseId": 1,
       "courseName": "Matematik",
       "courseCode": "MAT101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 2,
+      "courseName": "Fizik",
+      "courseCode": "FZK101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 3,
+      "courseName": "Kimya",
+      "courseCode": "KMY101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 4,
+      "courseName": "Biyoloji",
+      "courseCode": "BYL101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 5,
+      "courseName": "Türkçe",
+      "courseCode": "TRK101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 6,
+      "courseName": "Tarih",
+      "courseCode": "TRH101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 7,
+      "courseName": "Coğrafya",
+      "courseCode": "CGF101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 8,
+      "courseName": "Felsefe",
+      "courseCode": "FLS101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     }
   ]
