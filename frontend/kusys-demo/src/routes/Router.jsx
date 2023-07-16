@@ -25,6 +25,9 @@ const AppRouter = () => {
             <Route path="/home/:username/courses" element={<CoursesPage />} />
             <Route path="/home/:username/students/:id" element={<StudentDetailPage />} />
             {/* Diğer rotaları buraya ekleyin */}
+            <Route path="*" element={<h1>404 Not Found</h1>} /> 
+
+
           </Routes>
         </Router>
       );

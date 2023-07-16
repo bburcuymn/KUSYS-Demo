@@ -1,8 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ isAdmin }) => {
+const Navbar = ({ isAdmin, handleLogout }) => {
     const navigate = useNavigate();
 
     const handleStudentsClick = () => {
@@ -11,7 +11,7 @@ const Navbar = ({ isAdmin }) => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand" to="/home">
                 My App
             </Link>
             <button
@@ -30,6 +30,11 @@ const Navbar = ({ isAdmin }) => {
                     {isAdmin ? (
                         <>
                             <li className="nav-item">
+                                <a className="nav-link" onClick={handleLogout}>
+                                    Logout
+                                </a>
+                            </li>
+                            <li className="nav-item">
                                 <a className="nav-link" onClick={handleStudentsClick}>
                                     Students
                                 </a>
@@ -43,6 +48,11 @@ const Navbar = ({ isAdmin }) => {
                     ) : (
                         <>
                             <li className="nav-item">
+                                <a className="nav-link" onClick={handleLogout}>
+                                    Logout
+                                </a>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link" to="/my-courses">
                                     My Courses
                                 </Link>
@@ -54,11 +64,6 @@ const Navbar = ({ isAdmin }) => {
                             </li>
                         </>
                     )}
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/logout">
-                            Logout
-                        </Link>
-                    </li>
                 </ul>
             </div>
         </nav>

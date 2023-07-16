@@ -183,13 +183,13 @@ app.post('/api/students/login', (req, res) => {
 
     if (matchedStudent) {
         console.log('Login başarılı', matchedStudent);
-        res.status(200).json({ message: 'Login başarılı' });
+        res.status(200).json(matchedStudent); // Tüm öğrenci bilgilerini döndür
+
     } else {
         console.log('Login başarısız');
         res.status(401).json({ error: 'Login başarısız' });
     }
 });
-
 
 // Admin listesi için GET isteğini işle
 app.get('/api/admins', (req, res) => {
@@ -237,8 +237,6 @@ app.get('/api/allCourses', (req, res) => {
         res.status(500).json({ error: 'Tüm derslerin verilerini okuma hatası' });
     }
 });
-
-
 
 
 app.listen(port, () => {
