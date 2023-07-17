@@ -8,6 +8,7 @@ import StudentsPage from "../views/StudentsPage/StudentsPage";
 import RegisterPageAdmin from "../views/RegisterPageAdmin/RegisterPageAdmin";
 import RegisterPageStudent from "../views/RegisterPageStudent/RegisterPageStudent";
 import StudentCourseList from '../views/StudentsCourseList/StudentCourseList';
+import NotFoundPage from '../views/NotFound/NotFoundPage';
 
 
 const AppRouter = () => {
@@ -24,7 +25,7 @@ const AppRouter = () => {
             <Route path="/home/students" element={<StudentsPage />} />
             <Route path="/my-courses" element={<StudentCourseList />} />
             {/* Diğer rotaları buraya ekleyin */}
-            <Route path="*" element={<h1>404 Not Found</h1>} /> 
+            <Route path="*" element={<NotFoundPage />} /> 
 
 
           </Routes>

@@ -3,16 +3,20 @@ import React from 'react';
 const MyCourses = ({ student }) => {
     return (
         <div>
-            <h1>My Courses</h1>
+            <h1 className='my-5 text-center fw-bold'>MY COURSES</h1>
             {student && student.courses && student.courses.length > 0 ? (
-                <ul>
+                <div className="course-list d-flex justify-content-center align-items-center gap-5 my-5">
                     {student.courses.map((course) => (
-                        <li key={course.courseId}>
-                            <h3>{course.courseName}</h3>
-                            <p>{course.courseCode}</p>
-                        </li>
+                        <div key={course.courseId} className="card" style={{ width: '18rem' }}>
+                            <img src={course.img} className="card-img-top" alt={course.courseName} />
+                            <div className="card-body">
+                                <h5 className="card-title">{course.courseName}</h5>
+                                <p className="card-text">{course.courseCode}</p>
+                                <a href="#" className="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
                     ))}
-                </ul>
+                </div>
             ) : (
                 <p>No courses selected.</p>
             )}

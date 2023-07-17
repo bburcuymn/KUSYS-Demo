@@ -1,10 +1,11 @@
 // CoursesList.js
 
 import React from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const CoursesList = ({ courses, isAdmin, student, updateStudentCourses }) => {
-    // console.log("courselist" + isAdmin);
-    // console.log("courselist" + student.name);
 
     const renderActionButton = (course) => {
         if (isAdmin === false) {
@@ -12,24 +13,31 @@ const CoursesList = ({ courses, isAdmin, student, updateStudentCourses }) => {
                 return (
                     <button
                         className="btn btn-danger"
-                        onClick={() => updateStudentCourses(course.courseId, 'drop')}
+                        onClick={() => {
+                            updateStudentCourses(course.courseId, 'drop');
+                            toast.success(`You Dropped The Class: ${course.courseName}`);
+                        }}
                     >
-                        Dersi Bırak
+                        Unregister
                     </button>
                 );
             } else {
                 return (
                     <button
                         className="btn btn-primary"
-                        onClick={() => updateStudentCourses(course.courseId, 'enroll')}
+                        onClick={() => {
+                            updateStudentCourses(course.courseId, 'enroll');
+                            toast.success(`You registered for the course: ${course.courseName}`);
+                        }}
                     >
-                        Dersi Al
+                        Register
                     </button>
                 );
             }
         }
         return null;
     };
+
 
 
     const isCourseEnrolled = (courseId) => {

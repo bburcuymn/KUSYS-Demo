@@ -3,6 +3,11 @@ import axios from 'axios';
 import Navbar from '../../components/Navbar/Navbar';
 import { useLocation } from 'react-router-dom';
 import Footer from '../../components/Footer/Footer';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 
 const StudentPage = () => {
   const [students, setStudents] = useState([]);
@@ -38,10 +43,13 @@ const StudentPage = () => {
     try {
       await axios.delete(`/api/students/${studentId}`);
       fetchStudents();
+      toast.success('Student Deleted. Please Refresh the Page!');
     } catch (error) {
       console.log('Error while deleting student', error);
+      toast.error('Öğrenci silme işlemi başarısız oldu');
     }
   };
+  
 
   const handleUpdateStudent = async (studentId) => {
     const student = students.find((student) => student.studentId === studentId);
@@ -58,6 +66,7 @@ const StudentPage = () => {
       setIsModalOpen(true);
     }
   };
+  
 
   const handleOpenStudentDetails = (studentId) => {
     const student = students.find((student) => student.studentId === studentId);
@@ -91,12 +100,14 @@ const StudentPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       if (selectedStudentId) {
         await axios.put(`/api/students/${selectedStudentId}`, formData);
+        toast.success('Student Updated. Please Refresh the Page!');
       } else {
         await axios.post('/api/students', formData);
+        toast.success('Student created. Please refresh the page!');
       }
       fetchStudents();
       setIsModalOpen(false);
@@ -111,8 +122,10 @@ const StudentPage = () => {
       });
     } catch (error) {
       console.log('Error while updating/creating student', error);
+      toast.error('Öğrenci ekleme/güncelleme başarısız oldu');
     }
   };
+  
 
   const formatCourses = (courses) => {
     return courses.map((course) => (

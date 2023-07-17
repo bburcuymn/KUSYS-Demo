@@ -1,6 +1,10 @@
 // import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { RegisterPageStyle } from './RegisterPageStyle';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const RegisterPageAdmin = () => {
     const [name, setName] = useState('');
@@ -9,7 +13,12 @@ const RegisterPageAdmin = () => {
     const [corporationNo, setCorporationNo] = useState('');
     const [birthDay, setBirthDay] = useState('');
 
+    const navigate = useNavigate();
+
+
+
     const handleRegister = async (event) => {
+
         event.preventDefault();
 
         const newAdmin = { name, email, corporationNo, birthDay, password };
@@ -25,11 +34,14 @@ const RegisterPageAdmin = () => {
             });
 
             console.log('Admin başarıyla kaydedildi:', newAdmin);
+            toast.success('Registration Successful!'); // Başarılı bildirimi göster
+
             // Kayıt işleminden sonra yapılacak işlemler
         } catch (error) {
             console.error('Kayıt işlemi başarısız:', error);
             // Hata durumunda yapılacak işlemler
         }
+        navigate('/loginAdmin');
     };
 
 
@@ -62,7 +74,7 @@ const RegisterPageAdmin = () => {
                         <label className='me-3' htmlFor="confirmPassword">Confirm Password:</label>
                         <input type="password" id="confirmPassword" placeholder="Confirm password" required />
                     </div>
-                    <button type="submit" className="primary">Register</button>
+                    <button type="submit" className="primary" onClick={handleRegister}>Register</button>
                 </form>
 
             </div>

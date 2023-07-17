@@ -67,7 +67,7 @@ const HomePage = (props) => {
   };
 
   const handleLogout = () => {
-    setAuth(false);
+    setAuth(false, false);
     navigate('/');
   };
 

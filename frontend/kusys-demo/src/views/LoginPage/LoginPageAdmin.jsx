@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { LoginPageStyle } from './LoginPageStyle';
 import axios from 'axios';
 import { AuthContext } from '../../AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPageAdmin = () => {
     const [corporationNo, setCorporationNo] = useState('');
@@ -20,6 +22,7 @@ const LoginPageAdmin = () => {
             });
 
             console.log('Login başarılı', response.data);
+            toast.success('Login Successful!');
 
             setAuth(true, true); // isAdmin: true, isLoggedIn: true
 

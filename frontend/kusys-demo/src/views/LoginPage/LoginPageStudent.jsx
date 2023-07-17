@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { LoginPageStyle } from './LoginPageStyle';
 import axios from 'axios';
 import { AuthContext } from '../../AuthContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPageStudent = () => {
     const [schoolNo, setSchoolNo] = useState('');
@@ -20,6 +22,7 @@ const LoginPageStudent = () => {
             });
 
             console.log('Login başarılı', response.data);
+            toast.success('Login Successful!');
 
             setAuth(false, true); // isAdmin: false, isLoggedIn: true
 // console.log('response.data', response.data);

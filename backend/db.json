@@ -31,46 +31,59 @@
       "corporationNo": "5555555555",
       "birthDay": "1988-12-11",
       "password": "deneme"
+    },
+    {
+      "adminId": 5,
+      "name": "AdminBurcu",
+      "email": "adminburcu@gmail.com",
+      "corporationNo": "65656565",
+      "birthDay": "1999-11-11",
+      "password": "adminburcu"
+    },
+    {
+      "adminId": 6,
+      "name": "denemeadmin2",
+      "email": "denemeadmin2@gmail.com",
+      "corporationNo": "777777",
+      "birthDay": "1999-08-07",
+      "password": "1234"
+    },
+    {
+      "adminId": 7,
+      "name": "aa",
+      "email": "aa",
+      "corporationNo": "000",
+      "birthDay": "2023-07-05",
+      "password": "444"
     }
   ],
   "students": [
     {
       "studentId": 2,
-      "name": "Baran Altunnn",
+      "name": "Baran Altunnn güncelleeee",
       "email": "baran@gmail.com",
       "schoolNo": "9898989",
-      "birthDay": "06.06.1999",
+      "birthDay": "1999-04-04",
       "password": "999999",
       "courses": [
         {
           "courseId": 1,
-          "courseName": "Matematik",
+          "courseName": "Math",
           "courseCode": "MAT101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         },
         {
           "courseId": 2,
-          "courseName": "Fizik",
+          "courseName": "Physics",
           "courseCode": "FZK101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         },
         {
           "courseId": 3,
-          "courseName": "Kimya",
+          "courseName": "Chemistry",
           "courseCode": "KMY101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         }
-      ]
-    },
-    {
-      "studentId": 3,
-      "name": "deneme",
-      "email": "deneme@gmail.com",
-      "schoolNo": "66666",
-      "birthDay": "2002-11-11",
-      "password": "55555",
-      "courses": [
-        {}
       ]
     },
     {
@@ -92,59 +105,117 @@
       "courses": [
         {
           "courseId": 4,
-          "courseName": "Biyoloji",
+          "courseName": "Bialogy",
           "courseCode": "BYL101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         },
         {
           "courseId": 3,
-          "courseName": "Kimya",
+          "courseName": "Chemistry",
           "courseCode": "KMY101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         }
       ]
+    },
+    {
+      "studentId": 6,
+      "name": "denemeöğrenci",
+      "email": "deneme@gmail.com",
+      "schoolNo": "88888",
+      "birthDay": "2000-05-08",
+      "password": "2222",
+      "courses": []
+    },
+    {
+      "studentId": 7,
+      "name": "denemeöğrenci",
+      "email": "deneme@gmail.com",
+      "schoolNo": "88888",
+      "birthDay": "2000-05-08",
+      "password": "2222",
+      "courses": []
+    },
+    {
+      "studentId": 8,
+      "name": "deneme777",
+      "email": "deneme777@gmail.com",
+      "schoolNo": "66666",
+      "birthDay": "2000-06-06",
+      "password": "6666",
+      "courses": [
+        {
+          "courseId": 1,
+          "courseName": "Math",
+          "courseCode": "MAT101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 2,
+          "courseName": "Physics",
+          "courseCode": "FZK101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        }
+      ]
+    },
+    {
+      "studentId": 9,
+      "name": "aa",
+      "email": "aaa@gmail.com",
+      "schoolNo": "1",
+      "birthDay": "2023-07-07",
+      "password": "123",
+      "courses": []
+    },
+    {
+      "studentId": 10,
+      "name": "Hülya Kaya",
+      "email": "bburcu0003@gmail.com",
+      "schoolNo": "66666",
+      "birthDay": "1999-03-31",
+      "password": "eeee",
+      "courses": []
     }
   ],
   "allCourses": [
     {
       "courseId": 1,
-      "courseName": "Matematik",
+      "courseName": "Math",
       "courseCode": "MAT101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },
     {
       "courseId": 2,
-      "courseName": "Fizik",
+      "courseName": "Physics",
       "courseCode": "FZK101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },
     {
       "courseId": 3,
-      "courseName": "Kimya",
+      "courseName": "Chemistry",
       "courseCode": "KMY101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },
     {
       "courseId": 4,
-      "courseName": "Biyoloji",
+      "courseName": "Bialogy",
       "courseCode": "BYL101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },
     {
       "courseId": 5,
-      "courseName": "Türkçe",
+      "courseName": "Turkish",
       "courseCode": "TRK101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },
     {
       "courseId": 6,
-      "courseName": "Tarih",
+      "courseName": "History",
       "courseCode": "TRH101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },
     {
       "courseId": 7,
-      "courseName": "Coğrafya",
+      "courseName": "Geography",
       "courseCode": "CGF101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     },

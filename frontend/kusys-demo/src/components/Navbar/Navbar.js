@@ -15,7 +15,10 @@ const Navbar = ({ isAdmin, handleLogout, student }) => {
         navigate('/my-courses', { state: { student } });
     };
 
-
+    // const handleLogout = () => {
+    //     setAuth(false, false);
+    //     navigate('/');
+    // };
 
     const isMyCoursesActive = location.pathname === '/my-courses';
 
@@ -69,7 +72,7 @@ const Navbar = ({ isAdmin, handleLogout, student }) => {
                                 </Link>
                             </li>
                             <li className="nav-item cursor-pointer">
-                                <a className="nav-link" onClick={handleLogout}>
+                                <a className="nav-link" onClick={handleLogout} >
                                     <i className="fa-solid fa-right-from-bracket text-success fs-5"></i> Logout
                                 </a>
                             </li>

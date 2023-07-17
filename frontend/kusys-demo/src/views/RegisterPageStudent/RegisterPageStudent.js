@@ -1,6 +1,10 @@
 // import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { RegisterPageStyle } from './RegisterPageStyle';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const RegisterPageAdmin = () => {
     const [name, setName] = useState('');
@@ -9,6 +13,7 @@ const RegisterPageAdmin = () => {
     const [schoolNo, setSchoolNo] = useState('');
     const [birthDay, setBirthDay] = useState('');
     const [courses, setCourses] = useState([]);
+    const navigate = useNavigate();
 
     const handleRegister = async (event) => {
         event.preventDefault();
@@ -26,11 +31,13 @@ const RegisterPageAdmin = () => {
             });
 
             console.log('Öğrenci başarıyla kaydedildi:', newStudent);
+            toast.success('Registration Successful!');
             // Kayıt işleminden sonra yapılacak işlemler
         } catch (error) {
             console.error('Kayıt işlemi başarısız:', error);
             // Hata durumunda yapılacak işlemler
         }
+        navigate('/loginStudent');
     };
 
 
