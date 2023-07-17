@@ -1,5 +1,3 @@
-// HomePage.js
-
 import React, { useEffect, useState, useContext } from 'react';
 import Navbar from '../../components/Navbar/Navbar';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -10,21 +8,24 @@ import { AuthContext } from '../../AuthContext';
 
 const HomePage = (props) => {
   const [courses, setCourses] = useState([]);
+  const [studentData, setStudentData] = useState(null);
   const location = useLocation();
   const { isAdmin, setAuth } = useContext(AuthContext);
 
   const navigate = useNavigate();
-  const studentData = location.state && location.state.student;
+  const studentDataFromLocation = location.state && location.state.student;
 
   useEffect(() => {
     fetchCourses();
-  }, []);
+    if (studentDataFromLocation) {
+      setStudentData(studentDataFromLocation);
+    }
+  }, [studentDataFromLocation]);
 
   const fetchCourses = async () => {
     try {
       const response = await axios.get('/api/allCourses');
       setCourses(response.data);
-      console.log('Student Data:', studentData);
     } catch (error) {
       console.log('Error while fetching courses', error);
     }
@@ -51,7 +52,7 @@ const HomePage = (props) => {
       const response = await axios.put(`/api/students/${updatedStudent.studentId}`, updatedStudent);
       console.log('Updated Student:', response.data);
 
-      // Güncellenen öğrenci verilerini setStudent gibi bir işlemle güncelleyebilirsiniz
+      setStudentData(updatedStudent); // Öğrenci verilerini güncelleme
     } catch (error) {
       console.log('Error while updating student courses', error);
     }

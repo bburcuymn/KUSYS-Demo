@@ -81,6 +81,22 @@
       "birthDay": "1999-11-11",
       "password": "11111",
       "courses": ""
+    },
+    {
+      "studentId": 5,
+      "name": "Hülya Kaya",
+      "email": "hulya@gmail.com",
+      "schoolNo": "1111111",
+      "birthDay": "1999-11-11",
+      "password": "1111",
+      "courses": [
+        {
+          "courseId": 4,
+          "courseName": "Biyoloji",
+          "courseCode": "BYL101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        }
+      ]
     }
   ],
   "allCourses": [

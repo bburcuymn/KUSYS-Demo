@@ -31,6 +31,7 @@ const CoursesList = ({ courses, isAdmin, student, updateStudentCourses }) => {
         return null;
     };
 
+
     const isCourseEnrolled = (courseId) => {
         return (
             student &&
