@@ -73,7 +73,7 @@ const HomePage = (props) => {
 
   return (
     <div>
-      <Navbar isAdmin={isAdmin} handleLogout={handleLogout} />
+      <Navbar isAdmin={isAdmin} handleLogout={handleLogout} student={studentData} />
       <CoursesList
         courses={courses}
         isAdmin={isAdmin}

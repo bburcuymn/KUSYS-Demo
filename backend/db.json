@@ -95,6 +95,12 @@
           "courseName": "Biyoloji",
           "courseCode": "BYL101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 3,
+          "courseName": "Kimya",
+          "courseCode": "KMY101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         }
       ]
     }

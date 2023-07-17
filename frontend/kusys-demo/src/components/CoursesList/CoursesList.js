@@ -3,8 +3,8 @@
 import React from 'react';
 
 const CoursesList = ({ courses, isAdmin, student, updateStudentCourses }) => {
-    console.log(isAdmin);
-    console.log(student);
+    // console.log("courselist" + isAdmin);
+    // console.log("courselist" + student.name);
 
     const renderActionButton = (course) => {
         if (isAdmin === false) {

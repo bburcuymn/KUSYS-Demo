@@ -1,13 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ isAdmin, handleLogout }) => {
+const Navbar = ({ isAdmin, handleLogout, student }) => {
     const navigate = useNavigate();
+    const location = useLocation();
+
 
     const handleStudentsClick = () => {
         navigate('/home/students', { state: { isAdmin: true } });
     };
+
+    const handleMyCoursesClick = () => {
+        navigate('/my-courses', { state: { student } });
+    };
+
+
+
+    const isMyCoursesActive = location.pathname === '/my-courses';
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 px-5">
@@ -29,39 +39,38 @@ const Navbar = ({ isAdmin, handleLogout }) => {
                 <ul className="navbar-nav d-flex gap-4 fs-6 ">
                     {isAdmin ? (
                         <>
-
                             <li className="nav-item cursor-pointer">
                                 <a className="nav-link" onClick={handleStudentsClick}>
-                                    <i class="fa-solid fa-people-group text-success fs-5"></i> Students
+                                    <i className="fa-solid fa-people-group text-success fs-5"></i> Students
                                 </a>
                             </li>
                             <li className="nav-item cursor-pointer">
                                 <Link className="nav-link" to="/profile">
-                                    <i class="fa-solid fa-user text-success fs-5"></i>  Profile
+                                    <i className="fa-solid fa-user text-success fs-5"></i> Profile
                                 </Link>
                             </li>
                             <li className="nav-item cursor-pointer">
                                 <a className="nav-link" onClick={handleLogout}>
-                                    <i class="fa-solid fa-right-from-bracket text-success fs-5"></i>  Logout
+                                    <i className="fa-solid fa-right-from-bracket text-success fs-5"></i> Logout
                                 </a>
                             </li>
                         </>
                     ) : (
                         <>
+                            <li className={`nav-item cursor-pointer ${isMyCoursesActive ? 'active' : ''}`}>
+                                <a className="nav-link" onClick={handleMyCoursesClick}>
+                                    <i className="fa-solid fa-book text-success fs-5"></i> My Courses
+                                </a>
 
-                            <li className="nav-item cursor-pointer">
-                                <Link className="nav-link" to="/my-courses">
-                                    <i class="fa-solid fa-book text-success fs-5"></i> My Courses
-                                </Link>
                             </li>
                             <li className="nav-item cursor-pointer">
                                 <Link className="nav-link" to="/profile">
-                                    <i class="fa-solid fa-user text-success fs-5"></i>   Profile
+                                    <i className="fa-solid fa-user text-success fs-5"></i> Profile
                                 </Link>
                             </li>
                             <li className="nav-item cursor-pointer">
                                 <a className="nav-link" onClick={handleLogout}>
-                                    <i class="fa-solid fa-right-from-bracket text-success fs-5"></i>   Logout
+                                    <i className="fa-solid fa-right-from-bracket text-success fs-5"></i> Logout
                                 </a>
                             </li>
                         </>

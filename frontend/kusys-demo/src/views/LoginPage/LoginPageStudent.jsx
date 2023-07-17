@@ -24,6 +24,9 @@ const LoginPageStudent = () => {
             setAuth(false, true); // isAdmin: false, isLoggedIn: true
 // console.log('response.data', response.data);
             navigate('/home',  { state: { student: response.data } });
+         
+
+
         } catch (error) {
             console.log('Login başarısız', error);
         }
