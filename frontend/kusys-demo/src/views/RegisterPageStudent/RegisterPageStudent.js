@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const RegisterPageAdmin = () => {
+const RegisterPageStudent = () => {
     // State tanımlamaları
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -122,4 +122,4 @@ const RegisterPageAdmin = () => {
     );
 };
 
-export default RegisterPageAdmin;
+export default RegisterPageStudent;
