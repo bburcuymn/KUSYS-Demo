@@ -22,6 +22,7 @@ const HomePage = (props) => {
     }
   }, [studentDataFromLocation]);
 
+  // Kursları getiren işlev
   const fetchCourses = async () => {
     try {
       const response = await axios.get('/api/allCourses');
@@ -31,6 +32,7 @@ const HomePage = (props) => {
     }
   };
 
+  // Öğrenci derslerini güncelleyen işlev
   const updateStudentCourses = async (courseId, action) => {
     try {
       const updatedStudent = { ...studentData };
@@ -58,6 +60,7 @@ const HomePage = (props) => {
     }
   };
 
+  // Dersin öğrenci tarafından alınıp alınmadığını kontrol eden işlev
   const isCourseEnrolled = (courseId) => {
     return (
       studentData &&
@@ -66,8 +69,9 @@ const HomePage = (props) => {
     );
   };
 
+  // Çıkış işlevi
   const handleLogout = () => {
-    setAuth(false, false);
+    setAuth(false, false); // isAdmin: false, isLoggedIn: false
     navigate('/');
   };
 

@@ -39,6 +39,14 @@
       "corporationNo": "11111",
       "birthDay": "1999-10-10",
       "password": "12345"
+    },
+    {
+      "adminId": 6,
+      "name": "admin deneme",
+      "email": "admin@gmail.com",
+      "corporationNo": "123456789",
+      "birthDay": "1999-11-11",
+      "password": "123456789"
     }
   ],
   "students": [
@@ -72,7 +80,7 @@
     },
     {
       "studentId": 2,
-      "name": "Burcu Yaman",
+      "name": "Burcuu Yaman",
       "email": "burcu@gmail.com",
       "schoolNo": "11111",
       "birthDay": "1999-11-11",
@@ -188,9 +196,9 @@
     },
     {
       "studentId": 11,
-      "name": "Burcu Deneme",
-      "email": "deneme@gmail.com",
-      "schoolNo": "12345",
+      "name": "Burcu Öğrenci",
+      "email": "burcu@gmail.com",
+      "schoolNo": "123456",
       "birthDay": "1999-10-10",
       "password": "burcu123",
       "courses": [
@@ -207,9 +215,21 @@
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         },
         {
-          "courseId": 3,
-          "courseName": "Chemistry",
-          "courseCode": "KMY101",
+          "courseId": 11,
+          "courseName": "French",
+          "courseCode": "FRN101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 8,
+          "courseName": "Felsefe",
+          "courseCode": "FLS101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 10,
+          "courseName": "Germany",
+          "courseCode": "ALM101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         },
         {
@@ -223,11 +243,57 @@
           "courseName": "Geography",
           "courseCode": "CGF101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        }
+      ]
+    },
+    {
+      "studentId": 12,
+      "name": "öğrenci deneme",
+      "email": "deneme@gmail.com",
+      "schoolNo": "123456",
+      "birthDay": "1999-11-11",
+      "password": "123456",
+      "courses": [
+        {
+          "courseId": 2,
+          "courseName": "Physics",
+          "courseCode": "FZK101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 7,
+          "courseName": "Geography",
+          "courseCode": "CGF101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         },
         {
           "courseId": 6,
           "courseName": "History",
           "courseCode": "TRH101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 10,
+          "courseName": "Germany",
+          "courseCode": "ALM101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 11,
+          "courseName": "French",
+          "courseCode": "FRN101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 8,
+          "courseName": "Felsefe",
+          "courseCode": "FLS101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 3,
+          "courseName": "Chemistry",
+          "courseCode": "KMY101",
           "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
         }
       ]

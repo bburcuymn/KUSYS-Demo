@@ -6,9 +6,8 @@ import Footer from '../../components/Footer/Footer';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
-
 const StudentPage = () => {
+  // Öğrenci listesi ve diğer state değerleri
   const [students, setStudents] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
@@ -22,9 +21,11 @@ const StudentPage = () => {
   const [selectedStudentId, setSelectedStudentId] = useState(null);
   const [selectedStudentInfo, setSelectedStudentInfo] = useState(null);
 
+  // Yönetici durumunu kontrol etmek için useLocation kullanımı
   const location = useLocation();
   const isAdmin = location.state && location.state.isAdmin;
 
+  // Öğrenci listesini almak için useEffect kullanımı
   useEffect(() => {
     fetchStudents();
   }, []);
@@ -38,6 +39,7 @@ const StudentPage = () => {
     }
   };
 
+  // Öğrenci silme işlemini gerçekleştiren fonksiyon
   const handleDeleteStudent = async (studentId) => {
     try {
       await axios.delete(`/api/students/${studentId}`);
@@ -49,7 +51,7 @@ const StudentPage = () => {
     }
   };
   
-
+  // Öğrenci güncelleme işlemini gerçekleştiren fonksiyon
   const handleUpdateStudent = async (studentId) => {
     const student = students.find((student) => student.studentId === studentId);
     if (student) {
@@ -66,7 +68,7 @@ const StudentPage = () => {
     }
   };
   
-
+  // Öğrenci detaylarını açan fonksiyon
   const handleOpenStudentDetails = (studentId) => {
     const student = students.find((student) => student.studentId === studentId);
     if (student) {
@@ -75,6 +77,7 @@ const StudentPage = () => {
     }
   };
 
+  // Modal'ı kapatma fonksiyonu
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedStudentId(null);
@@ -89,14 +92,15 @@ const StudentPage = () => {
     });
   };
 
+  // Form değerlerindeki değişiklikleri izleyen fonksiyon
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-      
     });
   };
 
+  // Formu gönderme fonksiyonu
   const handleSubmit = async (e) => {
     e.preventDefault();
   
@@ -125,15 +129,13 @@ const StudentPage = () => {
     }
   };
   
-
+  // Dersleri biçimlendiren yardımcı fonksiyon
   const formatCourses = (courses) => {
     return courses.map((course) => (
       <div key={course.courseId}>
-       
         <p>
           {course.courseCode}
         </p>
-       
       </div>
     ));
   };
@@ -146,7 +148,7 @@ const StudentPage = () => {
         {isAdmin && (
           <div className="mb-3 d-flex justify-content-end">
             <button className="btn btn-lg btn-primary" onClick={() => setIsModalOpen(true)}>
-            <i class="fa-solid fa-plus"></i> Create Student
+              <i class="fa-solid fa-plus"></i> Create Student
             </button>
           </div>
         )}
@@ -160,7 +162,7 @@ const StudentPage = () => {
           </thead>
           <tbody >
             {students.map((student) => (
-              <tr key={student.studentId} >
+              <tr key={student.studentId}>
                 <td>{student.name}</td>
                 <td>{student.schoolNo}</td>
                 {isAdmin && (
@@ -175,13 +177,13 @@ const StudentPage = () => {
                       className="btn btn-danger me-2"
                       onClick={() => handleDeleteStudent(student.studentId)}
                     >
-                     <i class="fa-solid fa-trash"></i> Delete
+                      <i class="fa-solid fa-trash"></i> Delete
                     </button>
                     <button
                       className="btn btn-success "
                       onClick={() => handleOpenStudentDetails(student.studentId)}
                     >
-                     <i class="fa-solid fa-circle-info"></i> Details
+                      <i class="fa-solid fa-circle-info"></i> Details
                     </button>
                   </td>
                 )}
@@ -286,17 +288,6 @@ const StudentPage = () => {
                         required
                       />
                     </div>
-                    {/* <div className="form-group">
-                      <label htmlFor="courses">Courses</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        id="courses"
-                        name="courses"
-                        value={formData.courses}
-                        onChange={handleChange}
-                      />
-                    </div> */}
                     <button type="submit" className="btn btn-primary">
                       {selectedStudentId ? 'Update' : 'Create'}
                     </button>

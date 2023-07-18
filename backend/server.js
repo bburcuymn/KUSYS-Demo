@@ -8,15 +8,11 @@ const dbFilePath = 'db.json';
 app.use(express.json());
 app.use(cors());
 
-
 app.get('/', (req, res) => {
     try {
         // db.json dosyasını oku
         const data = fs.readFileSync('db.json', 'utf8');
         const jsonData = JSON.parse(data);
-
-        // Okunan veriyi kullanarak istediğiniz işlemleri yapabilirsiniz
-        // Örneğin, veriyi bir değişkene atayabilir veya döngü ile tüm verileri dolaşabilirsiniz
 
         res.json(jsonData); // Okunan veriyi JSON formatında yanıt olarak döndürme örneği
     } catch (error) {
@@ -24,8 +20,6 @@ app.get('/', (req, res) => {
         res.status(500).json({ error: 'Veri okuma hatası' });
     }
 });
-
-
 
 // Admin kaydı için POST isteğini işle
 app.post('/api/admins', (req, res) => {
@@ -74,7 +68,7 @@ app.post('/api/students', (req, res) => {
     // Yeni adminin ID'sini belirle
     const newId = lastId + 1;
 
-    // Yeni admini oluştur
+    // Yeni öğrenci oluştur
     const newStudent = {
         studentId: newId,
         name,
@@ -86,7 +80,7 @@ app.post('/api/students', (req, res) => {
 
     };
 
-    // admins veri kümesine yeni admini ekle
+    // öğrenci veri kümesine yeni öğrenciyi ekle
     db.students.push(newStudent);
 
     // db.json dosyasına veriyi kaydet
@@ -169,6 +163,7 @@ app.post('/api/admins/login', (req, res) => {
         res.status(401).json({ error: 'Login başarısız' });
     }
 });
+
 app.post('/api/students/login', (req, res) => {
     const { schoolNo, password } = req.body;
 

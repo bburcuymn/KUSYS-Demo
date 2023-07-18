@@ -4,7 +4,6 @@ import LandingPage from "../views/LandingPage/LandingPage";
 import LoginPageAdmin from "../views/LoginPage/LoginPageAdmin";
 import LoginPageStudent from "../views/LoginPage/LoginPageStudent";
 import StudentsPage from "../views/StudentsPage/StudentsPage";
-
 import RegisterPageAdmin from "../views/RegisterPageAdmin/RegisterPageAdmin";
 import RegisterPageStudent from "../views/RegisterPageStudent/RegisterPageStudent";
 import StudentCourseList from '../views/StudentsCourseList/StudentCourseList';
@@ -24,10 +23,7 @@ const AppRouter = () => {
             <Route path="/home/:username" element={<HomePage />} />
             <Route path="/home/students" element={<StudentsPage />} />
             <Route path="/my-courses" element={<StudentCourseList />} />
-            {/* Diğer rotaları buraya ekleyin */}
             <Route path="*" element={<NotFoundPage />} /> 
-
-
           </Routes>
         </Router>
       );

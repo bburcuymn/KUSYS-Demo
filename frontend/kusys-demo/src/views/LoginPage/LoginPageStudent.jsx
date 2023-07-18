@@ -7,59 +7,61 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPageStudent = () => {
-    const [schoolNo, setSchoolNo] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-    const { setAuth } = useContext(AuthContext);
+  // State tanımlamaları
+  const [schoolNo, setSchoolNo] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const { setAuth } = useContext(AuthContext);
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-        try {
-            const response = await axios.post('/api/students/login', {
-                schoolNo,
-                password,
-            });
+    try {
+      // Öğrenci giriş isteği
+      const response = await axios.post('/api/students/login', {
+        schoolNo,
+        password,
+      });
 
-            console.log('Login başarılı', response.data);
-            toast.success('Login Successful!');
+      console.log('Login başarılı', response.data);
+      // Başarılı giriş bildirimi göster
+      toast.success('Login Successful!');
 
-            setAuth(false, true); // isAdmin: false, isLoggedIn: true
-// console.log('response.data', response.data);
-            navigate('/home',  { state: { student: response.data } });
-         
+      setAuth(false, true); // isAdmin: false, isLoggedIn: true
 
+      navigate('/home', { state: { student: response.data } });
+    } catch (error) {
+      console.log('Login başarısız', error);
+      // Hatalı giriş bildirimi göster
+      toast.error('Login Failed!');
+    }
+  };
 
-        } catch (error) {
-            console.log('Login başarısız', error);
-        }
-    };
-
-    return (
-        <LoginPageStyle >
-            <div className="login-page-content">
-                <h2>Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        placeholder="School No"
-                        value={schoolNo}
-                        onChange={(e) => setSchoolNo(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type="submit">Login</button>
-                </form>
-                <p>
-                    Don't have an account? <Link to="/registerStudent">Register</Link>
-                </p>
-            </div>
-        </LoginPageStyle>
-    );
+  return (
+    <LoginPageStyle>
+      <div className="login-page-content">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="School No"
+            value={schoolNo}
+            onChange={(e) => setSchoolNo(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p>
+          Don't have an account? <Link to="/registerStudent">Register</Link>
+        </p>
+      </div>
+    </LoginPageStyle>
+  );
 };
 
 export default LoginPageStudent;

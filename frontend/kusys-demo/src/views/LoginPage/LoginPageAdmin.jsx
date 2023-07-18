@@ -7,56 +7,61 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPageAdmin = () => {
-    const [corporationNo, setCorporationNo] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-    const { setAuth } = useContext(AuthContext);
+  // State tanımlamaları
+  const [corporationNo, setCorporationNo] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  const { setAuth } = useContext(AuthContext);
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
-        try {
-            const response = await axios.post('/api/admins/login', {
-                corporationNo,
-                password,
-            });
+    try {
+      // Admin giriş isteği
+      const response = await axios.post('/api/admins/login', {
+        corporationNo,
+        password,
+      });
 
-            console.log('Login başarılı', response.data);
-            toast.success('Login Successful!');
+      console.log('Login başarılı', response.data);
+      // Başarılı giriş bildirimi göster
+      toast.success('Login Successful!');
 
-            setAuth(true, true); // isAdmin: true, isLoggedIn: true
+      setAuth(true, true); // isAdmin: true, isLoggedIn: true
 
-            navigate('/home');
-        } catch (error) {
-            console.log('Login başarısız', error);
-        }
-    };
+      navigate('/home');
+    } catch (error) {
+      console.log('Login başarısız', error);
+      // Hatalı giriş bildirimi göster
+      toast.error('Login Failed!');
+    }
+  };
 
-    return (
-        <LoginPageStyle >
-            <div className="login-page-content">
-                <h2>Login</h2>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        placeholder="Corporation No"
-                        value={corporationNo}
-                        onChange={(e) => setCorporationNo(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type="submit">Login</button>
-                </form>
-                <p>
-                    Don't have an account? <Link to="/registerAdmin" className='text-decoration-none'>Register</Link>
-                </p>
-            </div>
-        </LoginPageStyle>
-    );
+  return (
+    <LoginPageStyle>
+      <div className="login-page-content">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Corporation No"
+            value={corporationNo}
+            onChange={(e) => setCorporationNo(e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button type="submit">Login</button>
+        </form>
+        <p>
+          Don't have an account? <Link to="/registerAdmin" className='text-decoration-none'>Register</Link>
+        </p>
+      </div>
+    </LoginPageStyle>
+  );
 };
 
 export default LoginPageAdmin;
