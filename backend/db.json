@@ -6,7 +6,7 @@
       "email": "burcuyaman@gmail.com",
       "corporationNo": "1234567890",
       "birthDay": "10.08.1999",
-      "password": "123"
+      "password": "burcu123"
     },
     {
       "adminId": 2,
@@ -14,57 +14,41 @@
       "email": "baranaltun@gmail.com",
       "corporationNo": "33333333",
       "birthDay": "25.08.1999",
-      "password": "33333"
+      "password": "baran123"
     },
     {
       "adminId": 3,
-      "name": "deneme Yaman",
-      "email": "deneme@gmail.com",
+      "name": "Berin Ok",
+      "email": "berinok@gmail.com",
       "corporationNo": "9999999",
       "birthDay": "06.08.1999",
-      "password": "66666"
+      "password": "berin123"
     },
     {
       "adminId": 4,
-      "name": "testname",
-      "email": "testmail@gmail.com",
+      "name": "Hülya Kaya",
+      "email": "hülya@gmail.com",
       "corporationNo": "5555555555",
       "birthDay": "1988-12-11",
-      "password": "deneme"
+      "password": "hülya123"
     },
     {
       "adminId": 5,
-      "name": "AdminBurcu",
+      "name": "burcu admin",
       "email": "adminburcu@gmail.com",
-      "corporationNo": "65656565",
-      "birthDay": "1999-11-11",
-      "password": "adminburcu"
-    },
-    {
-      "adminId": 6,
-      "name": "denemeadmin2",
-      "email": "denemeadmin2@gmail.com",
-      "corporationNo": "777777",
-      "birthDay": "1999-08-07",
-      "password": "1234"
-    },
-    {
-      "adminId": 7,
-      "name": "aa",
-      "email": "aa",
-      "corporationNo": "000",
-      "birthDay": "2023-07-05",
-      "password": "444"
+      "corporationNo": "11111",
+      "birthDay": "1999-10-10",
+      "password": "12345"
     }
   ],
   "students": [
     {
-      "studentId": 2,
-      "name": "Baran Altunnn güncelleeee",
+      "studentId": 1,
+      "name": "Baran Altun",
       "email": "baran@gmail.com",
       "schoolNo": "9898989",
       "birthDay": "1999-04-04",
-      "password": "999999",
+      "password": "ögrencibaran",
       "courses": [
         {
           "courseId": 1,
@@ -87,21 +71,21 @@
       ]
     },
     {
-      "studentId": 4,
-      "name": "burcuyaman",
+      "studentId": 2,
+      "name": "Burcu Yaman",
       "email": "burcu@gmail.com",
       "schoolNo": "11111",
       "birthDay": "1999-11-11",
-      "password": "11111",
+      "password": "öğrenciburcu",
       "courses": ""
     },
     {
-      "studentId": 5,
+      "studentId": 3,
       "name": "Hülya Kaya",
       "email": "hulya@gmail.com",
       "schoolNo": "1111111",
       "birthDay": "1999-11-11",
-      "password": "1111",
+      "password": "öğrencihülya",
       "courses": [
         {
           "courseId": 4,
@@ -118,30 +102,30 @@
       ]
     },
     {
+      "studentId": 4,
+      "name": "Berin Ok",
+      "email": "berin@gmail.com",
+      "schoolNo": "88888",
+      "birthDay": "2000-05-08",
+      "password": "öğrenciberin",
+      "courses": []
+    },
+    {
+      "studentId": 5,
+      "name": "Başak Avkıran",
+      "email": "basak@gmail.com",
+      "schoolNo": "88888",
+      "birthDay": "2000-05-08",
+      "password": "öğrencibaşak",
+      "courses": []
+    },
+    {
       "studentId": 6,
-      "name": "denemeöğrenci",
-      "email": "deneme@gmail.com",
-      "schoolNo": "88888",
-      "birthDay": "2000-05-08",
-      "password": "2222",
-      "courses": []
-    },
-    {
-      "studentId": 7,
-      "name": "denemeöğrenci",
-      "email": "deneme@gmail.com",
-      "schoolNo": "88888",
-      "birthDay": "2000-05-08",
-      "password": "2222",
-      "courses": []
-    },
-    {
-      "studentId": 8,
-      "name": "deneme777",
-      "email": "deneme777@gmail.com",
+      "name": "Sema Zeynep",
+      "email": "semazeynep@gmail.com",
       "schoolNo": "66666",
       "birthDay": "2000-06-06",
-      "password": "6666",
+      "password": "öğrencisema",
       "courses": [
         {
           "courseId": 1,
@@ -158,22 +142,95 @@
       ]
     },
     {
-      "studentId": 9,
-      "name": "aa",
-      "email": "aaa@gmail.com",
-      "schoolNo": "1",
+      "studentId": 7,
+      "name": "Elif Cansu",
+      "email": "elifcansu@gmail.com",
+      "schoolNo": "111111",
       "birthDay": "2023-07-07",
-      "password": "123",
+      "password": "öğrencielif",
       "courses": []
     },
     {
       "studentId": 10,
-      "name": "Hülya Kaya",
-      "email": "bburcu0003@gmail.com",
+      "name": "Yağmur Altun",
+      "email": "yagmur@gmail.com",
       "schoolNo": "66666",
       "birthDay": "1999-03-31",
-      "password": "eeee",
+      "password": "öğrenciyagmur",
       "courses": []
+    },
+    {
+      "studentId": 8,
+      "name": "Ayşe Solmaz",
+      "email": "ayse@gmail.com",
+      "schoolNo": "66666",
+      "birthDay": "1999-03-31",
+      "password": "öğrenciayse",
+      "courses": []
+    },
+    {
+      "studentId": 9,
+      "name": "Fatma Solmaz",
+      "email": "fatma@gmail.com",
+      "schoolNo": "66666",
+      "birthDay": "1999-03-31",
+      "password": "öğrencifatma",
+      "courses": []
+    },
+    {
+      "studentId": 10,
+      "name": "Hayriye Solmaz",
+      "email": "hayriye@gmail.com",
+      "schoolNo": "66666",
+      "birthDay": "1999-03-31",
+      "password": "öğrencihayriye",
+      "courses": []
+    },
+    {
+      "studentId": 11,
+      "name": "Burcu Deneme",
+      "email": "deneme@gmail.com",
+      "schoolNo": "12345",
+      "birthDay": "1999-10-10",
+      "password": "burcu123",
+      "courses": [
+        {
+          "courseId": 1,
+          "courseName": "Math",
+          "courseCode": "MAT101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 2,
+          "courseName": "Physics",
+          "courseCode": "FZK101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 3,
+          "courseName": "Chemistry",
+          "courseCode": "KMY101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 4,
+          "courseName": "Bialogy",
+          "courseCode": "BYL101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 7,
+          "courseName": "Geography",
+          "courseCode": "CGF101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        },
+        {
+          "courseId": 6,
+          "courseName": "History",
+          "courseCode": "TRH101",
+          "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+        }
+      ]
     }
   ],
   "allCourses": [
@@ -223,6 +280,30 @@
       "courseId": 8,
       "courseName": "Felsefe",
       "courseCode": "FLS101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 9,
+      "courseName": "English",
+      "courseCode": "ENG101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 10,
+      "courseName": "Germany",
+      "courseCode": "ALM101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 11,
+      "courseName": "French",
+      "courseCode": "FRN101",
+      "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
+    },
+    {
+      "courseId": 12,
+      "courseName": "Spanish",
+      "courseCode": "SPN101",
       "img": "https://matematikrontgeni.com/uploads/posts/2023-01/seo-2048x1480-1.jpg"
     }
   ]

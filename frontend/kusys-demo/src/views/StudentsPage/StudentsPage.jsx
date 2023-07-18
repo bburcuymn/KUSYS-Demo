@@ -8,7 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-
 const StudentPage = () => {
   const [students, setStudents] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
